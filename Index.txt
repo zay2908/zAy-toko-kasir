@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toko zAy – Unduh Aplikasi Kasir untuk Windows</title>
+<meta name="description" content="Unduh Toko zAy, aplikasi kasir desktop untuk Windows. Gratis, tanpa memasang Java.">
+<style>
+:root{
+  --navy:#0f172a; --teal:#0f766e; --teal-hover:#115e59;
+  --bg:#f1f5f9; --card:#ffffff; --text:#1e293b; --muted:#64748b; --line:#e2e8f0;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0b1220; --card:#111a2e; --text:#e2e8f0; --muted:#94a3b8; --line:#1f2a44; color-scheme:dark;}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+a{color:var(--teal)}
+@media (prefers-color-scheme:dark){a{color:#5eead4}}
+.bar{background:var(--navy);color:#fff;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
+.bar strong{font-size:18px;letter-spacing:.2px}
+.bar a{color:#cbd5e1;font-size:14px;text-decoration:none}
+.bar a:hover{color:#fff}
+.wrap{max-width:960px;margin:0 auto;padding:32px 24px 48px}
+.hero{display:flex;gap:20px;align-items:center}
+.ikon{flex:none;width:88px;height:88px;border-radius:18px;background:var(--navy);color:#5eead4;display:grid;place-items:center;font-size:30px;font-weight:700}
+h1{margin:0;font-size:38px;line-height:1.15}
+.sub{margin:4px 0 0;font-size:18px;color:var(--muted)}
+.aksi{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;margin:28px 0}
+.unduh{display:flex;flex-direction:column;align-items:center;background:var(--teal);color:#fff;text-decoration:none;padding:14px 56px;border-radius:10px}
+.unduh:hover{background:var(--teal-hover)}
+.unduh strong{font-size:24px}
+.unduh span{font-size:13px;opacity:.9}
+:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}
+.info{display:flex;gap:28px;margin:0}
+.info div{display:flex;flex-direction:column}
+.info dt{font-size:13px;color:var(--muted)}
+.info dd{margin:0;font-weight:600}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{font:inherit;font-weight:600;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:12px 20px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--text);border-bottom-color:var(--teal)}
+.panel{background:var(--card);border:1px solid var(--line);border-top:0;padding:24px 28px;max-width:100%}
+.panel[hidden]{display:none}
+.panel h2{margin:0 0 8px;font-size:22px}
+.panel p{max-width:68ch}
+.panel li{margin:6px 0}
+figure{margin:20px 0 0}
+figure img{display:block;max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+.akun{margin-top:16px;padding:12px 16px;border-left:4px solid var(--teal);background:var(--bg)}
+footer{margin-top:32px;color:var(--muted);font-size:14px}
+@media (max-width:640px){
+  h1{font-size:30px} .hero{align-items:flex-start}
+  .ikon{width:64px;height:64px;font-size:22px;border-radius:14px}
+  .unduh{width:100%} .info{width:100%;justify-content:space-between}
+  .panel{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bar">
+  <strong>Toko zAy</strong>
+  <a href="https://github.com/zay2908/zAy-toko-kasir-/releases">Semua versi</a>
+</div>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="ikon" aria-hidden="true">zAy</div>
+    <div>
+      <h1>Toko zAy</h1>
+      <p class="sub">Aplikasi kasir desktop untuk Windows. Gratis, tanpa memasang Java.</p>
+    </div>
+  </section>
+
+  <div class="aksi">
+    <a class="unduh" href="https://github.com/zay2908/zAy-toko-kasir-/releases/latest/download/TokoKasir.zip">
+      <strong>Unduh</strong>
+      <span>TokoKasir.zip, sekitar 45 MB</span>
+    </a>
+    <dl class="info">
+      <div><dt>Versi</dt><dd>1.0</dd></div>
+      <div><dt>Sistem</dt><dd>Windows 10 dan 11</dd></div>
+      <div><dt>Bahasa</dt><dd>Indonesia</dd></div>
+    </dl>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Informasi aplikasi">
+    <button role="tab" id="t1" aria-selected="true" aria-controls="p1">Ringkasan</button>
+    <button role="tab" id="t2" aria-selected="false" aria-controls="p2">Fitur</button>
+    <button role="tab" id="t3" aria-selected="false" aria-controls="p3">Cara pasang</button>
+  </div>
+
+  <section class="panel" id="p1" role="tabpanel" aria-labelledby="t1">
+    <h2>Tentang Toko zAy</h2>
+    <p>Toko zAy adalah aplikasi kasir berbasis Java Swing. Kasir memasukkan barang lewat kode, aplikasi menghitung total dan kembalian, lalu struk bisa dicetak atau disimpan.</p>
+    <figure>
+      <img src="screenshot.png" alt="Tampilan aplikasi kasir Toko zAy" onerror="this.closest('figure').hidden=true">
+    </figure>
+  </section>
+
+  <section class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+    <h2>Fitur</h2>
+    <ul>
+      <li>Login dengan pilihan peran Kasir atau Admin</li>
+      <li>Input barang lewat kode; nama, harga, dan stok terisi otomatis</li>
+      <li>Keranjang belanja: tambah, ubah jumlah, hapus, kosongkan</li>
+      <li>Total dan kembalian dihitung otomatis</li>
+      <li>Struk bisa dicetak atau disimpan sebagai file .txt</li>
+      <li>Riwayat transaksi dan total pendapatan</li>
+    </ul>
+  </section>
+
+  <section class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+    <h2>Cara pasang</h2>
+    <ol>
+      <li>Klik tombol Unduh.</li>
+      <li>Klik kanan file zip, lalu pilih Extract All.</li>
+      <li>Buka folder hasilnya, lalu klik dua kali TokoKasir.</li>
+      <li>Jika muncul “Windows protected your PC”, klik More info, lalu Run anyway. Peringatan ini muncul karena aplikasi belum bertanda tangan digital.</li>
+    </ol>
+    <p class="akun"><strong>Akun untuk mencoba.</strong> Kasir: irfan / k01. Admin: admin / a01. Pilih peran yang sesuai di form login.</p>
+  </section>
+
+  <footer>Dibuat oleh IRFAN SAPUTRA ZAI, SISTEM INFORMASI / UNIVERSITAS NIAS RAYA.</footer>
+</main>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role=tab]'));
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){
+        var on=(x===t);
+        x.setAttribute('aria-selected',on);
+        document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
